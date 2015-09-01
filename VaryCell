@@ -1,0 +1,18 @@
+ph = 1;
+po = 1;
+dVdT = linspace(.001, .010);
+T1 =  linspace(400, 1500);
+% figure(1)
+% plot(dVdT,Pnet,'m--')
+% figure(2)
+% hold off
+% [AX] = plotyy(dVdT,Real,dVdT,Pnet);
+% ylabel(AX(1),'Efficiency')
+% ylabel(AX(2),'Net Power')
+Pnet = zeros(100,1);
+E = Pnet;
+Et = E;
+Real = E;
+
+figure(3)
+surf(Pnet, E, Real)
