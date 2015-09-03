@@ -1,0 +1,14 @@
+function [sig, q] = ITM(T, L, pf, pp, t)
+global R F
+
+R = .0831;
+F = 96400;
+k = log (pf/pp);
+dNdt = 1.63;
+a = 25;
+A = a/t;
+q = dNdt/A*(1/t);
+sig = (q*4*L*2^2*F^2)/((R*T)*log(pf/pp));
+% x = (q*4*L*2^2*F^2)
+% y = ((R*T)*log(pf/pp))
+% v = log(pf/pp)
